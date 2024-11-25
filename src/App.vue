@@ -1,10 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import Cabecalho_c from './components/cabecalho_c.vue';
+import Menu_c from './components/menu_c.vue';
 </script>
 
 <template>
-  <Cabecalho_c />
+  <Menu_c />
   <RouterLink />
   <RouterView />
 </template>

@@ -9,13 +9,7 @@
         </div>
         <div class="menu">
             <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>Drive</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                
             </nav>
         </div>
     </div>
@@ -26,7 +20,7 @@
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: rgb(63, 60, 60);
+    background-color: #1a2041;
     height: 70px;
     flex-direction: row;
     flex-wrap: nowrap;
