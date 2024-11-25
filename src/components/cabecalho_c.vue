@@ -5,7 +5,7 @@
 <template>
     <div id="container">
         <div class="logo">
-            <img src="../assets/logo/logo.png" alt="">
+
         </div>
         <div class="menu">
             <nav>
@@ -27,20 +27,27 @@
     padding: 0;
     display: flex;
     background-color: red;
+    height: 70px;
 }
-
-ul.menu {
+.logo{
+    background-color: blue;
+    background-image: url('../assets/logo/logo.png');
+}
+.menu{
+    background-color: green;
+}
+ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
 }
 
-ul.menu li {
+ul li {
     margin-right: 20px;
 }
 
-ul.menu li a {
+ul li a {
     text-decoration: none;
     color: black;
 }
