@@ -10,5 +10,8 @@ import Cabecalho_c from './components/cabecalho_c.vue';
 </template>
 
 <style scoped>
-
+  body{
+    margin: 0;
+    padding: 0;
+  }
 </style>
