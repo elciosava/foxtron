@@ -5,7 +5,7 @@
 <template>
     <div id="container">
         <div class="logo">
-
+            <img class="img_logo" src="../assets/logo/logo.png" alt="">
         </div>
         <div class="menu">
             <nav>
@@ -26,15 +26,31 @@
     margin: 0;
     padding: 0;
     display: flex;
-    background-color: red;
+    background-color: rgb(63, 60, 60);
     height: 70px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
 }
-.logo{
-    background-color: blue;
-    background-image: url('../assets/logo/logo.png');
+.logo{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+}
+.img_logo{
+    width: 200px;
+    height: auto;
 }
 .menu{
-    background-color: green;
+    padding: 20px;
+    margin: 20px;
+    font-size: 1.2em;
 }
 ul {
     list-style-type: none;
@@ -44,7 +60,9 @@ ul {
 }
 
 ul li {
-    margin-right: 20px;
+    margin: 20px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 ul li a {
