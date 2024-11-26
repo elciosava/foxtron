@@ -1,5 +1,5 @@
 <script setup>
-import HomeView from '@/views/HomeView.vue';
+
 import { ref, onMounted } from 'vue';
 
 // Controle do menu
@@ -33,7 +33,7 @@ onMounted(() => {
                 <nav v-if="isMenuOpen">
                     <ul>
                         <li><RouterLink to="index.html">Home</RouterLink></li>
-                        <li><RouterLink to="drive">Drive</RouterLink></li>
+                        <li><RouterLink to="../views/driveV.vue">Drive</RouterLink></li>
                         <li><RouterLink to="instantaneagran">Instantaneagran</RouterLink></li>
                         <li><RouterLink to="contact">Contact</RouterLink></li>
                     </ul>
