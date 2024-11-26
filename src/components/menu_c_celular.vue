@@ -1,60 +1,55 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
+// Controle do menu
 const isMenuOpen = ref(false);
 
+// Define o estado inicial baseado no tamanho da tela
+const initializeMenuState = () => {
+    isMenuOpen.value = window.innerWidth >= 768; // Aberto no desktop, fechado no celular
+};
+
+// Alterna o menu ao clicar no botão hambúrguer
 const toggleMenu = () => {
     isMenuOpen.value = !isMenuOpen.value;
 };
+
+// Define o estado inicial ao carregar
+onMounted(() => {
+    initializeMenuState();
+});
 </script>
 
 <template>
-    <div id="app">
-        <!-- Cabeçalho -->
-        <div id="container">
-            <div class="logo">
-                <img class="img_logo" src="../assets/logo/logo.png" alt="Logo">
-            </div>
-            <div class="menuzinho">
-                <nav>
-
+    <div id="container">
+        <div id="app">
+            <div :class="['sidebar', { open: isMenuOpen }]">
+                <button class="hamburger" @click="toggleMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav v-if="isMenuOpen">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </nav>
             </div>
         </div>
-
-        <!-- Menu lateral -->
-        <div :class="['sidebar', { open: isMenuOpen }]">
-            <!-- Botão estilo hambúrguer -->
-            <button class="hamburger" @click="toggleMenu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav v-if="isMenuOpen">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <!-- Conteúdo principal -->
-        <main>
-            <p>Este é o conteúdo principal da sua página.</p>
-        </main>
     </div>
 </template>
+
 
 <style scoped>
 /* Estilo do cabeçalho */
 #container {
-    margin: 0;
+    margin-left: 250px;
     padding: 0;
     display: flex;
-    background-color: #1a2041;
-    height: 70px;
+    height: calc(100vh - 70px);
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #fff;
@@ -72,7 +67,8 @@ const toggleMenu = () => {
     width: 200px;
     height: auto;
 }
-.menuzinho{
+
+.menuzinho {
     width: 400px;
     height: 40px;
 }
@@ -89,6 +85,7 @@ const toggleMenu = () => {
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     transition: width 0.3s ease-in-out;
     overflow: hidden;
+    margin-top: 70px;
 }
 
 .sidebar.open {
@@ -162,5 +159,19 @@ const toggleMenu = () => {
 /* Conteúdo principal */
 main {
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+    #container {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: calc(100vh - 70px);
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 </style>
