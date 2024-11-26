@@ -1,4 +1,5 @@
 <script setup>
+import HomeView from '@/views/HomeView.vue';
 import { ref, onMounted } from 'vue';
 
 // Controle do menu
@@ -38,7 +39,7 @@ onMounted(() => {
                     </ul>
                 </nav>
             </div>
-        </div>
+        </div>        
     </div>
 </template>
 
