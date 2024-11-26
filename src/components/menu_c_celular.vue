@@ -31,10 +31,10 @@ onMounted(() => {
                 </button>
                 <nav v-if="isMenuOpen">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><RouterLink to="index.html">Home</RouterLink></li>
+                        <li><RouterLink to="drive">Drive</RouterLink></li>
+                        <li><RouterLink to="instantaneagran">Instantaneagran</RouterLink></li>
+                        <li><RouterLink to="contact">Contact</RouterLink></li>
                     </ul>
                 </nav>
             </div>
