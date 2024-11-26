@@ -1,5 +1,7 @@
 <script setup>
 
+import Cabecalho_c from '@/components/cabecalho_c.vue';
+import Menu_c_celular from '@/components/menu_c_celular.vue';
 import { ref, onMounted } from 'vue';
 
 // Controle do menu
@@ -22,6 +24,7 @@ onMounted(() => {
 </script>
 
 <template>
+    <Cabecalho_c />
     <div id="container">
         <div id="app">
             <div :class="['sidebar', { open: isMenuOpen }]">

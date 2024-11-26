@@ -11,7 +11,7 @@ const router = createRouter({
       component: IndexV,
     },
     {
-      path: "/driveV",
+      path: "/Drive",
       name: "Drive",
       component: DriveV,
     },

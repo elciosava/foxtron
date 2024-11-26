@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div id="container">
+    <div id="container_cabecalho">
         <div class="logo">
             <img class="img_logo" src="../assets/logo/logo.png" alt="">
         </div>
@@ -16,7 +16,7 @@
 </template>
 
 <style scoped>
-#container {
+#container_cabecalho {
     margin: 0;
     padding: 0;
     display: flex;
