@@ -43,7 +43,11 @@ onMounted(() => {
                 </nav>
             </div>
         </div>   
-            <h1>coisaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</h1>           
+            <div class="cabecalho_drive">
+                <div class="titulo_drive">
+                    <h2>Aqui põe titulo</h2>
+                </div>
+            </div>           
     </div>
 </template>
 
@@ -58,13 +62,11 @@ body{
 /* Estilo do cabeçalho */
 #container_menu {
     margin-left: 250px;
-    padding: 0;
+    padding: 0 0 0 20px;
     display: flex;
     height: calc(100vh - 70px);
-    align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     flex-direction: row;
-    justify-content: space-around;
 }
 
 .logo {
