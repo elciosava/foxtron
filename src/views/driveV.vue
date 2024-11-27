@@ -25,7 +25,7 @@ onMounted(() => {
 
 <template>
     <Cabecalho_c />
-    <div id="container">
+    <div id="container_menu">
         <div id="app">
             <div :class="['sidebar', { open: isMenuOpen }]">
                 <button class="hamburger" @click="toggleMenu">
@@ -49,15 +49,20 @@ onMounted(() => {
 
 
 <style scoped>
+body{
+    color: #000;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
 /* Estilo do cabeçalho */
-#container {
+#container_menu {
     margin-left: 250px;
     padding: 0;
     display: flex;
     height: calc(100vh - 70px);
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #fff;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -133,7 +138,7 @@ onMounted(() => {
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
-    height: 30px;
+    height: 25px;
     background: none;
     border: none;
     cursor: pointer;
