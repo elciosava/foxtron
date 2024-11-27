@@ -45,7 +45,7 @@ onMounted(() => {
         </div>   
             <div class="cabecalho_drive">
                 <div class="titulo_drive">
-                    <h2>Aqui põe titulo</h2>
+                    <h2>Meu Drive</h2>
                 </div>
             </div>           
     </div>
@@ -62,7 +62,7 @@ body{
 /* Estilo do cabeçalho */
 #container_menu {
     margin-left: 250px;
-    padding: 0 0 0 20px;
+    padding: 0;
     display: flex;
     height: calc(100vh - 70px);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -171,6 +171,15 @@ body{
 /* Conteúdo principal */
 main {
     padding: 20px;
+}
+.cabecalho_drive{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 @media (max-width: 768px) {
