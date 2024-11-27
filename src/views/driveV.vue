@@ -180,6 +180,7 @@ main {
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
+    border-bottom: solid 1px grey;
 }
 
 @media (max-width: 768px) {
