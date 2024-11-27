@@ -129,7 +129,7 @@ onMounted(() => {
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
-    height: 30px;
+    height: 25px;
     background: none;
     border: none;
     cursor: pointer;
